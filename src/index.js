@@ -8,7 +8,8 @@ import papertext from "./assets/text/paper/paperyellow.png";
 import paperalt from "./assets/text/paper/paperblueyellow.png";
 import scissorstext from "./assets/text/scissors/scissorsblue.png";
 import scissorsalt from "./assets/text/scissors/scissorsbluered.png";
-import { hover } from "@testing-library/user-event/dist/hover";
+import youwin from "./assets/text/you win/youwinyellow.png";
+import cpuwin from "./assets/text/cpu wins/cpuwinsyellow.png";
 
 const weapons = ["rock", "paper", "scissors"];
 class App extends Component {
@@ -48,9 +49,9 @@ class App extends Component {
       (playerOne === "scissors" && playerTwo === "paper") ||
       (playerOne === "paper" && playerTwo === "rock")
     ) {
-      return "Player One Wins!";
+      return <img src={youwin} alt="Player One Wins" className="win-text" />;
     } else {
-      return "Player Two Wins!";
+      return <img src={cpuwin} alt="CPU Wins" className="win-text" />;
     }
   };
   selectWeapon = (weapon) => {
@@ -97,6 +98,8 @@ class App extends Component {
           ></img>
         </h1>
 
+        <div className="winner">{winner ? this.selectWinner() : null}</div>
+
         <div className="fighters">
           <Player weapon={playerOne} />
           <Player weapon={playerTwo} />
@@ -137,10 +140,6 @@ class App extends Component {
             className="scissorsBtn"
           />
         </div>
-        <div className="winner">{winner ? this.selectWinner() : null}</div>
-        <button type="button" onClick={this.startGame}>
-          Start!
-        </button>
       </>
     );
   }

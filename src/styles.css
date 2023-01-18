@@ -12,6 +12,7 @@ body {
   margin: 1rem auto;
   display: flex;
   justify-content: space-evenly;
+  overflow: hidden;
 }
 
 .headerImg {
@@ -29,6 +30,7 @@ body {
   text-align: center;
   display: inline-block;
   background: transparent;
+  position: relative;
 }
 
 .fighters {
@@ -55,6 +57,7 @@ body {
 
 .rockBtn:hover {
   background-image: url("/src/assets/text/rock/rockyellowred.png");
+  cursor: pointer;
 }
 
 .paperBtn {
@@ -72,6 +75,7 @@ body {
 
 .paperBtn:hover {
   background-image: url(/src/assets/text/paper/paperblueyellow.png);
+  cursor: pointer;
 }
 
 .scissorsBtn {
@@ -89,6 +93,7 @@ body {
 
 .scissorsBtn:hover {
   background-image: url(/src/assets/text/scissors/scissorsbluered.png);
+  cursor: pointer;
 }
 
 .player:nth-child(2) {
@@ -97,35 +102,22 @@ body {
 }
 
 .winner {
-  width: 100px;
-  height: 55px;
-  margin: 10px auto;
-  color: brown;
-  font-size: 18px;
   text-align: center;
-  font-weight: bold;
   background: transparent;
+  position: absolute;
+  margin-top: 5rem;
+  margin-left: 35rem;
+  z-index: 1;
 }
+
+.win-text {
+  background: transparent;
+  max-width: 50%;
+  max-height: 50%;
+}
+
 .player-image {
-  height: 200px;
+  height: 10rem;
   width: auto;
   background: transparent;
-}
-
-button {
-  width: 200px;
-  height: 50px;
-  display: block;
-  margin: 10px auto;
-  color: #fff;
-  font-size: 18px;
-  border-radius: 25px;
-  background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(8px);
-  border-color: var(--colorp-primary-variant);
-  outline: none;
-}
-
-button:hover {
-  cursor: pointer;
 }
