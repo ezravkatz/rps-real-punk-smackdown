@@ -43,15 +43,15 @@ class App extends Component {
     const { playerOne, playerTwo } = this.state;
 
     if (playerOne === playerTwo) {
-      return "Oops it's a Tie!";
+      return <div className="tie-text">Oops! it's a Tie!</div>;
     } else if (
       (playerOne === "rock" && playerTwo === "scissors") ||
       (playerOne === "scissors" && playerTwo === "paper") ||
       (playerOne === "paper" && playerTwo === "rock")
     ) {
-      return <img src={youwin} alt="Player One Wins" className="win-text" />;
+      return <img src={youwin} alt="Player One Wins" className="you-win" />;
     } else {
-      return <img src={cpuwin} alt="CPU Wins" className="win-text" />;
+      return <img src={cpuwin} alt="CPU Wins" className="cpu-win" />;
     }
   };
   selectWeapon = (weapon) => {
