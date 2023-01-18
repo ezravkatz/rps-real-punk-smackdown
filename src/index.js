@@ -12,7 +12,34 @@ import youwin from "./assets/text/you win/youwinyellow.png";
 import cpuwin from "./assets/text/cpu wins/cpuwinsyellow.png";
 
 const weapons = ["rock", "paper", "scissors"];
+// var imgList = [];
 class App extends Component {
+  //   btnBlink = () => {
+  //   const [blink, setBlink] = useState('initial');
+  //   const createImgList = () => {
+  //    // create an array of images to apply the border effect
+  //    var imgs = document.body.getElementsByTagName("img");
+  //    for (var i = 0; i < imgs.length; i++) {
+  //      if (imgs[i].className == "border0") {
+  //        setBlink('blinking')
+  //        imgList.push(imgs[i]);
+  //      }
+  //    }
+  //    btnBlink(1);
+  //  };
+
+  //  btnBlink = (n) => {
+  //    for (var i = 0; i < imgList.length; i++) {
+  //      imgList[i].className = "border" + n;
+  //    }
+  //    setTimeout(function () {
+  //      btnBlink(Math.abs(n - 1));
+  //    }, 1000);
+  //  };
+  //  document.onload = createImgList();
+
+  // }
+
   state = {
     playerOne: weapons[0],
     playerTwo: weapons[0],
@@ -76,6 +103,54 @@ class App extends Component {
     this.startGame();
   };
 
+  // blinkColor(color) {
+  //   let colorButton = document.getElementsByClassName("rockBtn");
+  //   colorButton.src = "./assets/text/rock/rockblue.png";
+  //   if (colorButton === document.getElementsByClassName("rockBtn")) {
+  //     setTimeout(() => {
+  //       colorButton.src = "./assets/text/rock/rockred.png";
+  //     }, 5);
+  //   } else {
+  //     setTimeout(() => {
+  //       colorButton.src = "./assets/text/rock/rockyellow.png";
+  //     }, 5);
+  //   }
+  // }
+
+  //  createImgList = () => {
+  //   // create an array of images to apply the border effect
+  //   var imgs = document.body.getElementsByTagName("img");
+  //   for (var i = 0; i < imgs.length; i++) {
+  //     if (imgs[i].className == "border0") {
+  //       imgList.push(imgs[i]);
+  //     }
+  //   }
+  //   borderchange(1);
+  // };
+
+  // borderchange = (n) => {
+  //   for (var i = 0; i < imgList.length; i++) {
+  //     imgList[i].className = "border" + n;
+  //   }
+  //   setTimeout(function () {
+  //     borderchange(Math.abs(n - 1));
+  //   }, 1000);
+  // };
+
+  // componentDidMount() {
+  // blinkBorder(colorA = "#F7E61A", colorB = "#223FFA", btnBorder, time) => {
+  //   this.componentDidMount(){
+  //     document.getElementById(btnBorder).style.borderColor = colorB;
+  //     setTimeout(() => {
+  //       this.blinkBorder(colorB, colorA, btnBorder, time);
+  //       colorA = null;
+  //       colorB = null;
+  //       btnBorder = null;
+  //       time = null;
+  //     }, 500);
+  //   }
+  // }
+
   render() {
     const { playerOne, playerTwo, winner } = this.state;
     return (
@@ -116,6 +191,7 @@ class App extends Component {
             onMouseLeave={() => this.setState({ img1: true })}
             className="rockBtn"
           />
+
           <input
             type="image"
             alt="Paper text"

@@ -38,6 +38,17 @@ body {
   color: transparent;
 }
 
+input {
+  animation-name: blinking;
+  animation-duration: 1s;
+  animation-iteration-count: 100;
+}
+@keyframes blinking {
+  50% {
+    border-color: #ffcd5f;
+  }
+}
+
 .btn-container {
   background: transparent;
 }
@@ -52,7 +63,9 @@ body {
   border-radius: 25px;
   background: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(8px);
-  border-color: var(--colorp-primary-variant);
+  border-style: solid;
+  border-color: blue;
+  border-width: 0.5rem;
 }
 
 .rockBtn:hover {
@@ -71,6 +84,9 @@ body {
   background: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(8px);
   border-color: var(--colorp-primary-variant);
+  border-style: solid;
+  border-color: blue;
+  border-width: 0.5rem;
 }
 
 .paperBtn:hover {
@@ -88,7 +104,9 @@ body {
   border-radius: 25px;
   background: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(8px);
-  border-color: var(--colorp-primary-variant);
+  border-style: solid;
+  border-color: black;
+  border-width: 0.5rem;
 }
 
 .scissorsBtn:hover {
