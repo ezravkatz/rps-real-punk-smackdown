@@ -7,6 +7,12 @@
   padding: 5px;
 }
 
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
 body {
   width: 100%;
   margin: 1rem auto;
@@ -126,7 +132,7 @@ input {
   position: absolute;
   margin-top: 5rem;
   margin-left: 35rem;
-  z-index: 1;
+  z-index: 2;
 }
 
 .you-win,
@@ -167,66 +173,98 @@ input {
   background: transparent;
 }
 
+/* media queries for mobile devices */
+
 @media screen and (max-width: 480px) {
+  * {
+    background-image: url(./assets/bgmobile.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+  }
+
+  html,
+  body {
+    height: 100vh;
+    width: 100vw;
+  }
+
   .headerImg {
-    position: relative;
-    height: 3rem;
-    width: 5rem;
-    right: 4.2rem;
+    display: inline;
+    height: 2.5rem;
+    width: 4rem;
     background-color: transparent;
     background: transparent;
-    bottom: 3rem;
+    position: relative;
+    right: 4rem;
   }
 
   .player {
-    display: inline;
-    margin: auto 5px;
+    display: inline-block;
+    margin: auto -4rem;
     color: transparent;
     background: transparent;
-    backdrop-filter: blur(8px);
     border-style: solid;
     border-width: 0.5rem;
+    bottom: 52rem;
+    right: 1rem;
   }
 
   .player-image {
     height: 5rem;
     width: 5rem;
     background: transparent;
-    position: relative;
     bottom: 1.7rem;
+  }
+
+  .rockBtn,
+  .paperBtn,
+  .scissorsBtn {
+    width: 5rem;
+    height: 2.5rem;
+    position: relative;
+    bottom: 97rem;
+    z-index: 2;
   }
 
   .rockBtn {
     width: 5rem;
     height: 2.5rem;
-    position: relative;
-    right: 0.5rem;
   }
 
   .paperBtn {
     width: 5rem;
     height: 2.5rem;
-    position: relative;
-    right: 1rem;
+    right: 1.3rem;
   }
 
   .scissorsBtn {
     width: 5rem;
     height: 2.5rem;
-    margin-left: 4rem;
-    margin-top: 0.3rem;
-    position: relative;
+    left: 3.8rem;
   }
 
   .winner,
   .you-win,
   .cpu-win,
   .draw {
-    text-align: center;
     background: transparent;
     position: absolute;
-    z-index: 1;
-    height: 5rem;
-    width: 8rem;
+    bottom: 20rem;
+    width: 25rem;
+    height: 15rem;
+    margin-left: -5.5rem;
+  }
+
+  .draw {
+    right: 5rem;
+  }
+
+  .you-win {
+    margin-left: -6.5rem;
+  }
+
+  .cpu-win {
+    width: 29rem;
   }
 }
