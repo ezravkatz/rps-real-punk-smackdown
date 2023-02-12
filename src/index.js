@@ -193,7 +193,7 @@ class App extends Component {
 
         <motion.div
           className="fighters"
-          animate={{ y: [0, 50, 0] }}
+          animate={{ y: [0, 40, 0] }}
           transition={{ delay: 0.5, duration: 1, repeat: 2 }}
         >
           <Player weapon={playerOne} />
