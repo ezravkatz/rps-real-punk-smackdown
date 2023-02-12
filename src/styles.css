@@ -192,11 +192,11 @@ input {
   .headerImg {
     display: inline;
     height: 2.5rem;
-    width: 6rem;
+    width: 7rem;
     background-color: transparent;
     background: transparent;
     position: relative;
-    right: 2.5rem;
+    right: 1rem;
   }
 
   .player {
@@ -206,7 +206,7 @@ input {
     background: transparent;
     border-style: solid;
     border-width: 0.5rem;
-    bottom: 45rem;
+    bottom: 20rem;
     right: 1rem;
   }
 
@@ -223,7 +223,7 @@ input {
     width: 5rem;
     height: 2.5rem;
     position: relative;
-    bottom: 80rem;
+    bottom: 30rem;
     z-index: 2;
   }
 
