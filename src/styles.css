@@ -192,7 +192,7 @@ input {
   .headerImg {
     display: inline;
     height: 2.5rem;
-    width: 7rem;
+    width: 6rem;
     background-color: transparent;
     background: transparent;
     position: relative;
@@ -206,7 +206,7 @@ input {
     background: transparent;
     border-style: solid;
     border-width: 0.5rem;
-    bottom: 20rem;
+    bottom: 35rem;
     right: 1rem;
   }
 
@@ -223,7 +223,7 @@ input {
     width: 5rem;
     height: 2.5rem;
     position: relative;
-    bottom: 30rem;
+    bottom: 50rem;
     z-index: 2;
   }
 
