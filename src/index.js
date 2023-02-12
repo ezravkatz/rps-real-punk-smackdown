@@ -1,8 +1,8 @@
-import React, { Component, useEffect } from "react";
+import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import Player from "./Player";
 import "./styles.css";
-import { animate, motion, useMotionValue } from "framer-motion";
+import { motion } from "framer-motion";
 import rocktext from "./assets/text/rock/rockred.png";
 import rockhover from "./assets/text/rock/rockyellowred.png";
 import papertext from "./assets/text/paper/paperyellow.png";
@@ -68,15 +68,15 @@ class App extends Component {
     }, 100);
   };
 
-  handAnimation = () => {
-    let fighters = document.getElementsByClassName("fighters");
-    const x = useMotionValue(0);
-    if (this.startGame()) {
-      useEffect((fighters) => {
-        fighters.animate(x, 5);
-      });
-    }
-  };
+  // handAnimation = () => {
+  //   let fighters = document.getElementsByClassName("fighters");
+  //   const x = useMotionValue(0);
+  //   if (this.startGame()) {
+  //     useEffect((fighters) => {
+  //       fighters.animate(x, 5);
+  //     });
+  //   }
+  // };
 
   selectWinner = () => {
     const { playerOne, playerTwo } = this.state;
