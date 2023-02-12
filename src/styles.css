@@ -207,7 +207,7 @@ input {
     border-style: solid;
     border-width: 0.5rem;
     bottom: 30rem;
-    right: 1rem;
+    left: 2rem;
   }
 
   .player-image {
@@ -225,11 +225,13 @@ input {
     position: relative;
     bottom: 65rem;
     z-index: 2;
+    left: 2rem;
   }
 
   .rockBtn {
     width: 5rem;
     height: 2.5rem;
+    right: 0.3rem;
   }
 
   .paperBtn {
@@ -241,7 +243,7 @@ input {
   .scissorsBtn {
     width: 5rem;
     height: 2.5rem;
-    left: 3.8rem;
+    left: 6.2rem;
   }
 
   .winner,
