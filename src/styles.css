@@ -40,8 +40,8 @@ body {
 
 input {
   animation-name: blinking;
-  animation-duration: 1s;
-  animation-iteration-count: 100;
+  animation-duration: 1.3s;
+  animation-iteration-count: infinite;
 }
 @keyframes blinking {
   50% {
@@ -51,6 +51,7 @@ input {
 
 .btn-container {
   background: transparent;
+  margin-top: -3rem;
 }
 
 .rockBtn {
@@ -83,7 +84,6 @@ input {
   border-radius: 25px;
   background: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(8px);
-  border-color: var(--colorp-primary-variant);
   border-style: solid;
   border-color: blue;
   border-width: 0.5rem;
@@ -105,7 +105,7 @@ input {
   background: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(8px);
   border-style: solid;
-  border-color: black;
+  border-color: blue;
   border-width: 0.5rem;
 }
 
@@ -129,7 +129,8 @@ input {
 }
 
 .you-win,
-.cpu-win {
+.cpu-win,
+.draw {
   background: transparent;
 }
 
@@ -140,6 +141,12 @@ input {
 }
 
 .cpu-win {
+  background: transparent;
+  max-width: 50%;
+  max-height: 50%;
+}
+
+.draw {
   background: transparent;
   max-width: 50%;
   max-height: 50%;

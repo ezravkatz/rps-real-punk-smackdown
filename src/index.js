@@ -1,7 +1,8 @@
-import React, { Component } from "react";
+import React, { Component, useEffect } from "react";
 import ReactDOM from "react-dom";
 import Player from "./Player";
 import "./styles.css";
+import { animate, motion, useMotionValue } from "framer-motion";
 import rocktext from "./assets/text/rock/rockred.png";
 import rockhover from "./assets/text/rock/rockyellowred.png";
 import papertext from "./assets/text/paper/paperyellow.png";
@@ -10,6 +11,7 @@ import scissorstext from "./assets/text/scissors/scissorsblue.png";
 import scissorsalt from "./assets/text/scissors/scissorsbluered.png";
 import youwin from "./assets/text/you win/youwinyellow.png";
 import cpuwin from "./assets/text/cpu wins/cpuwinsyellow.png";
+import draw from "./assets/text/draw/drawyellow.png";
 
 const weapons = ["rock", "paper", "scissors"];
 // var imgList = [];
@@ -66,11 +68,25 @@ class App extends Component {
     }, 100);
   };
 
+  handAnimation = () => {
+    let fighters = document.getElementsByClassName("fighters");
+    const x = useMotionValue(0);
+    if (this.startGame()) {
+      useEffect((fighters) => {
+        fighters.animate(x, 5);
+      });
+    }
+  };
+
   selectWinner = () => {
     const { playerOne, playerTwo } = this.state;
 
     if (playerOne === playerTwo) {
-      return <div className="tie-text">Oops! it's a Tie!</div>;
+      return (
+        <div className="tie-text">
+          <img src={draw} alt="Draw or Tie" className="draw" />
+        </div>
+      );
     } else if (
       (playerOne === "rock" && playerTwo === "scissors") ||
       (playerOne === "scissors" && playerTwo === "paper") ||
@@ -175,10 +191,14 @@ class App extends Component {
 
         <div className="winner">{winner ? this.selectWinner() : null}</div>
 
-        <div className="fighters">
+        <motion.div
+          className="fighters"
+          animate={{ y: [0, 50, 0] }}
+          transition={{ delay: 0.5, duration: 1, repeat: 2 }}
+        >
           <Player weapon={playerOne} />
           <Player weapon={playerTwo} />
-        </div>
+        </motion.div>
         <div className="btn-container">
           <input
             type="image"
