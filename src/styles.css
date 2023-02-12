@@ -192,11 +192,11 @@ input {
   .headerImg {
     display: inline;
     height: 2.5rem;
-    width: 4rem;
+    width: 6rem;
     background-color: transparent;
     background: transparent;
     position: relative;
-    right: 4rem;
+    right: 2.5rem;
   }
 
   .player {
@@ -206,7 +206,7 @@ input {
     background: transparent;
     border-style: solid;
     border-width: 0.5rem;
-    bottom: 52rem;
+    bottom: 45rem;
     right: 1rem;
   }
 
@@ -223,7 +223,7 @@ input {
     width: 5rem;
     height: 2.5rem;
     position: relative;
-    bottom: 97rem;
+    bottom: 80rem;
     z-index: 2;
   }
 
@@ -250,7 +250,7 @@ input {
   .draw {
     background: transparent;
     position: absolute;
-    bottom: 20rem;
+    bottom: 10rem;
     width: 25rem;
     height: 15rem;
     margin-left: -5.5rem;
@@ -262,9 +262,5 @@ input {
 
   .you-win {
     margin-left: -6.5rem;
-  }
-
-  .cpu-win {
-    width: 29rem;
   }
 }
